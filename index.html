@@ -2,21 +2,39 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <script
+            src="https://code.jquery.com/jquery-3.6.0.js"
+            integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
+            crossorigin="anonymous"></script>
     <title>LevelUP</title>
 </head>
 <body>
+<script>
+    $(window).on('scroll', function() {
+        let scrollCoef = 0.0021;
+
+        $('#video').css({
+            opacity: 1 - $(window).scrollTop() * scrollCoef
+        })
+    });
+</script>
+<video id="video" class="video" loop="loop" autoplay="" muted="" poster="https://denis-creative.com/wp-content/uploads/2020/04/video-poster.jpg">
+    <source src="Sunrise%20-%201844.mp4" type="video/mp4" />
+    <source src="https://denis-creative.com/wp-content/uploads/2020/04/video.ogv" type="video/ogv" />
+    <source src="https://denis-creative.com/wp-content/uploads/2020/04/video.webm" type="video/webm" />
+</video>
 <div class="block-1">
     <div class="block-1_background">
-        <div class="block-1_background_logo"></div>
-        <div class="block-1_background_content">
-            <div class="block-1_background_content_infobox">
-                <div class="block-1_background_content_infobox_title"></div>
-                <div class="block-1_background_content_infobox_description"></div>
-                <div class="block-1_background_content_infobox_button"></div>
+            <div class="block-1_background_logo"></div>
+            <div class="block-1_background_content">
+                <div class="block-1_background_content_infobox">
+                    <div class="block-1_background_content_infobox_title"></div>
+                    <div class="block-1_background_content_infobox_description"></div>
+                    <div class="block-1_background_content_infobox_button"></div>
+                </div>
+                <div class="block-1_background_content_img"></div>
             </div>
-            <div class="block-1_background_content_img"></div>
-        </div>
     </div>
 
 
