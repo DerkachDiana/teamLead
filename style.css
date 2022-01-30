@@ -1,5 +1,6 @@
 body {
     margin: unset;
+    font-family: 'Roboto';
 }
 .video {
     position: fixed;
@@ -8,21 +9,109 @@ body {
     height: 100vh;
     width: 100vw;
     object-fit: cover;
-    z-index: 1;
+    z-index: 0;
 }
-.block-1
-.block-2 {
+.content-constraint {
+    display: flex;
+    flex-direction: column;
+    max-width: 1200px;
+    padding: 50px;
+    align-items: center;
+}
+.block-1 {
     position: relative;
-    z-index: 2;
+    z-index: 100;
+}
+.block-1_background_content {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    background-color: white;
+    gap:20px;
+    align-items: center;
+}
+
+.block-1_background_content_infobox {
+    position: relative;
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    gap:20px;
+    justify-content: center;
+    align-items: center;
+}
+.block-1_background_content_infobox_title {
+    font-size: 50pt;
+
+}
+
+.block-1_background_content_infobox_description {
+    font-family: "Poiret One";
+    font-size: 15pt;
+    min-width: 250px;
+
+}
+.block-1_background_content_infobox_text {
+    display: flex;
+    flex-direction: column;
+    gap:10px;
+}
+.block-1_background_content_infobox_button {
+    background-color: #4e0b6c;
+    color: white;
+    padding: 10px 20px;
+    width: 100px;
+    border-radius: 45px;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.block-1_background_content_img {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex: 1;
+}
+.block-1_background_content_img img{
+    width: 150px;
+
+}
+.block-2 {
     opacity: 5%;
     height: 100vh;
     background-color: black;
     width: 100vw;
 }
 .block-3 {
-    z-index: 2;
     height: 2000px;
     background-color: yellow;
     width: 100vw;
 }
+#form {
+    text-decoration: none;
+    color:white;
+}
 
+.block-1_background_content_infobox_button:active {
+    box-shadow: inset 1px 1px 10px rgba(255, 255, 255, 0.6);
+}
+.block-2_background_row {
+    display: flex;
+    flex-direction: row;
+}
+.block-2_background_row_col {
+    display: flex;
+    flex-direction: column;
+}
+@media screen and (min-width: 500px) {
+    .block-1_background_content_infobox_title {
+        font-size: 50pt;
+    }
+    .block-1_background_content {
+        flex-direction: row;
+    }
+    .block-1_background_content_infobox {
+        justify-content: start;
+        align-items: start;
+    }
+}
